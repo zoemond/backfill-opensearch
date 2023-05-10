@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "backfill-opensearch"
+version = "0.1.0"
+description = ""
+authors = ["s-koki"]
+readme = "README.md"
+packages = [{include = "backfill_opensearch"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+boto3 = "^1.26.131"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
