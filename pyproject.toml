@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["s-koki"]
 readme = "README.md"
-packages = [{include = "backfill_opensearch"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
