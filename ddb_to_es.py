@@ -21,11 +21,12 @@ def main():
   parser.add_argument('--ak', metavar='AK', help='aws access key')
   parser.add_argument('--sk', metavar='AS', help='aws secret key')
   parser.add_argument('--st', metavar='AT', help='aws session token')
+  parser.add_argument('--pn', metavar='PN', help='aws profile name')
   args = parser.parse_args()
   scan_limit = 300
 
   if (args.ak is None or args.sk is None):
-    credentials = boto3.Session().get_credentials()
+    credentials = boto3.Session(profile_name=args.pn).get_credentials()
     args.sk = args.sk or credentials.secret_key
     args.ak = args.ak or credentials.access_key
     args.st = args.st or credentials.token
